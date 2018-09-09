@@ -1,0 +1,9 @@
+[package]
+name = "oxidizing-cube"
+version = "0.1.0"
+authors = ["moritz"]
+
+[dependencies]
+cgmath = "0.16.1"
+bresenham = "0.1.1"
+rand = "0.5.5"
