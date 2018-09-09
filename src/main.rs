@@ -12,7 +12,7 @@ use screen::*;
 // TODO: fix comulative floating point arithmetic error
 fn main() {
     // let chars = vec!['░', '▒', '▓', '█'];
-    // looks great, performse worse in most terminal emulators
+    // looks great, performs worse in most terminal emulators
     let chars = vec!['.', '~', 'o', '0'];
     let size = 35;
     let mut screen = Screen::new(2 * size, size, chars);
