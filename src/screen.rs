@@ -3,7 +3,6 @@ use cgmath::*;
 use std::cmp::max;
 use std::mem;
 
-#[derive(Debug)]
 pub struct Pixel {
     pub x: usize,
     pub y: usize,

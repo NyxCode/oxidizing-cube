@@ -9,24 +9,16 @@ use cgmath::*;
 use object::*;
 use screen::*;
 
-fn main3() {
-    let chars = vec!['.', '~', 'o', '0'];
-    let size = 35;
-    let mut screen = Screen::new(2 * size, size, chars);
-
-    screen.write_line(&Pixel::new(96, 20, 0), &Pixel::new(0, 34, 255));
-
-    screen.flush();
-}
-
+// TODO: fix comulative floating point arithmetic error
 fn main() {
-    //let chars = vec!['░', '▒', '▓', '█'];
+    // let chars = vec!['░', '▒', '▓', '█'];
+    // looks great, performse worse in most terminal emulators
     let chars = vec!['.', '~', 'o', '0'];
     let size = 35;
     let mut screen = Screen::new(2 * size, size, chars);
 
     let init_rotation = create_rotation_matrix(vec3(0., 0., 1.), 35.);
-    let rotation = create_rotation_matrix(vec3(0.5, 1., 0.), 1.);
+    let rotation = create_rotation_matrix(vec3(0.5, 1., 0.), 1.1);
     let projection = create_projection_matrix();
 
     let scale: f32 = 12.0;
